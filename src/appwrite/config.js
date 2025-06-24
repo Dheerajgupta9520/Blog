@@ -1,4 +1,4 @@
-import confi from "./confi.js";
+import conf from "../conf/conf.js";
 import { Client, Databases,  ID, Storage, Query } from "appwrite";
 
 export class Service{
@@ -8,8 +8,8 @@ export class Service{
 
     constructor(){
         this.client
-            .setEndpoint(confi.appwriteUrl)
-            .setProject(confi.appwriteProjectId);
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client);
     }
