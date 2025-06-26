@@ -11,14 +11,17 @@ export default function RTE({name,control,label,defaultValue=""}) {
         control={control}
         render={({field:{onChange}})=>(
             <Editor
-            value={defaultValue}
+            initialValue={defaultValue}
+            apiKey='bqj9pv7qb1afv7zqky0v38o7z4vvi5uxzzg22d1nv3fn0ahj'
             init={{
                 height: 500,
                 menubar: true,
-                plugins: [
-                    'advlist autolink lists link image charmap print preview anchor',
-                    'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table paste code help wordcount'
+                plugins:  [
+                  // Core editing features
+                  'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+                  // Your account includes a free trial of TinyMCE premium features
+                  // Try the most popular premium features until Jul 10, 2025:
+                  'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'mentions', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown','importword', 'exportword', 'exportpdf'
                 ],
                 toolbar: 'undo redo | formatselect | ' +
                 'bold italic backcolor | alignleft aligncenter ' +
